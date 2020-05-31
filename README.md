@@ -1,0 +1,2 @@
+# sample_simple_injector
+.NET FrameworkでSimpleInjectorの動きの実験をしたもの
