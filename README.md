@@ -1,2 +1,2 @@
 # sample_simple_injector
-.NET Frameworkã§SimpleInjectorã®å‹•ãã®å®Ÿé¨“ã‚’ã—ãŸã‚‚ã®
+.NET Framework‚ÅSimpleInjector‚Ì“®‚«‚ÌÀŒ±‚ğ‚µ‚½‚à‚Ì
