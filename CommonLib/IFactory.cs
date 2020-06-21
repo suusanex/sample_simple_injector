@@ -9,6 +9,8 @@ namespace DITest
     public interface IFactory
     {
         void CreateInstance(out IDITestClass diTestClass);
+
+        TType GetInstanceWithDI<TType>() where TType : class;
     }
 
 }

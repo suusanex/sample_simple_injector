@@ -29,6 +29,7 @@ namespace DITest
                 m_Collection.Register<IDITestClass, DITestClass>(Lifestyle.Singleton);
                 m_Collection.Register<IDITestClass2, DITestClass2>(Lifestyle.Singleton);
                 m_Collection.Register<IDITestClass2_Type2, DITestClass2>(Lifestyle.Singleton);
+                m_Collection.Register<IFactory>(() => this, Lifestyle.Singleton);
                 m_Collection.Verify();
             }
             catch (Exception e)
@@ -43,6 +44,16 @@ namespace DITest
         public void CreateInstance(out IDITestClass diTestClass)
         {
             diTestClass = m_Collection.GetInstance<IDITestClass>();
+        }
+
+        public TType GetInstanceWithDI<TType>() where TType : class
+        {
+            return m_Collection.GetInstance<TType>();
+        }
+
+        public void TestCallFactory()
+        {
+            Logger.Info($"{nameof(TestCallFactory)}");
         }
     }
 }
